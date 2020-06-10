@@ -1,0 +1,81 @@
+<?php
+	session_start();
+	
+	require("conection/connect.php");
+	
+	$msg="";
+	if(isset($_POST['btn_log'])){
+		$uname=$_POST['unametxt'];
+		$pwd=$_POST['pwdtxt'];
+		
+		$sql=mysql_query("SELECT * FROM users_tbl
+								WHERE username='$uname' AND password='$pwd' 
+								
+							");
+						
+		$cout=mysql_num_rows($sql);
+			if($cout>0){
+				$row=mysql_fetch_array($sql);
+					if($row['type']=='admin')
+						$msg="Login trov hery!.....";	
+					else
+						header("location: everyone.php");
+					
+			}
+			
+			else
+					$msg="User name or password is wrong !";
+}
+
+?>
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<p></p>
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="css/login.css" />
+</head>
+
+<body bgcolor="#2EFEF7">
+	
+	
+	<form method="post">
+
+    
+ 
+    	<fieldset>
+        	
+            	<div id="login_back">
+        			
+                    
+                    <div id="login_form">
+					<h1 style="color:blue;">Sunrise Management System </h1></br></br>
+					<align="center">
+					 	<img src="picture/sun.gif" width="99%" height=137% style="image_align:center;"/>
+									</align>
+                    </br>	<label for="login">Username:</label>
+                    	<input type="text" class="fields" name="unametxt" title="Enter username here"  />
+                        <div class="clear"></div>
+                        <label for="login">Password:</label>
+                        <input type="password" class="fields" name="pwdtxt"  title="Enter Password here"  autocomplete="off"/>
+                        <div class="clear"></div></br>
+                        
+                      
+                  
+						 <input type="submit" class="button" name="btn_log" value="Log in" />	
+                    <div>
+            	<a href="validation.php" >Forgotten password</a> </div>
+             </form>
+			 
+		
+                    </div>
+        		</div>
+    	</fieldset>
+    </form>
+	<h2 style="color:#F2F2F2;" align="center">
+	<?php echo $msg; ?>
+	</h2>
+</body>
+</html>

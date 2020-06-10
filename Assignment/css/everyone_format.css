@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background:url(../picture/back_login.gif);
+	margin:0;
+	font-family:Georgia, seri;
+	size:12px;	
+	border-radius: 10px;    
+	background-color: rgba(166, 168, 174, 0.22);
+}
+
+#top{
+	margin-top:0;
+	background:rgba(172, 68, 188, 1);
+	width:100%;
+	}
+#top div{
+	width:1050px;
+	color:#FFF;
+	text-align:right;
+	margin:0 auto;
+	padding:10px;
+	background:#03327e;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	}
+#admin{
+	background:rgb(206, 200, 178);
+	width:1200px;
+	margin:0 auto;
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	height:600px;
+	border-radius:1px;
+	
+}
+#lmain{
+	background:rgb(230, 229, 224);
+	padding-top:2px;
+	padding-left:5px;
+	font-size:36px;
+	color:#FFF;
+	text-align:center;	
+	width:230px;	
+	padding-left:0;
+	float:left;
+	height:595px;
+	
+}
+#leftmanu{
+	background:rgb(230, 229, 224);
+	height:336px;
+	width:180px;
+	border-radius:1px;
+	margin-left:14px;
+	margin-top:20px;
+	text-align:left;
+	text-indent:15px;
+	padding-top:5px;
+
+}
+#leftmanu div{
+	margin-top:15px;
+	
+    height: 30px;
+	height:30px;
+	border-bottom:rgb(80, 38, 183) 1px dashed;
+	
+}
+
+#leftmanu div a {
+	font-family:sans-serif;
+	font-size:18px;
+	text-decoration:none;
+	width:180px;
+	text-align:left;
+	color:rgb(241, 182, 8);
+}
+#leftmanu div a:hover{
+	color:#008040;
+	font-size:14px;
+	text-transform:uppercase;
+}
+#leftmanu div a:active{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	text-decoration:none;
+	text-align:left;
+	text-transform:lowercase;
+	color:#9D0000 ;
+}
+
+
+#rmain{
+
+	padding:0;
+	width:850px;
+	float:right;	
+
+
+}
+#pic_manu{
+	height:47px;
+	background:;	
+	border-bottom-left-radius:15px;
+	padding:0;
+}
+#contents{
+
+	height:513px;
+	margin-top:37px;
+	margin-left:5px;
+	width:840px;	
+	border-radius:8px;
+}
+#informations{
+	background:rgb(230, 229, 224);
+	height:507px;
+	width:840px;
+	padding-top:5px;
+	margin-top:15px;
+	border-radius:8px;
+	border:#333 1px solid;
+}
+#in_informations{
+	background:rgb(230, 229, 224);
+	height:470px;
+	width:815px;
+	margin-left:10px;
+	border-radius:8px;
+}
+.clear{
+	clear:both;
+	padding:0;
+	margin:0;
+	height:0;
+}

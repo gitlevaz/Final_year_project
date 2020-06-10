@@ -1,0 +1,36 @@
+
+
+	 <html>
+	 <head>
+	 <link rel="stylesheet" type="text/css" href="css/style_entry.css" /> 
+	 </head>
+
+<body></br>
+<p> University, Colombo, Western Province</p>
+<div id="map" style="width:100%;height:385px"></div>
+
+<script>
+
+function myMap() {
+  var myCenter = new google.maps.LatLng(6.784,80.0514);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 5};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+
+
+  var infowindow = new google.maps.InfoWindow({
+    content: "Sunrise Management System "
+
+  });
+  infowindow.open(map,marker);
+}
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+<p align="center" id="textbox3">Copyright@Sunrise Management System No 300,Colombo 07,Sri lanka.<br>Telephone:+94(12)666445/5673865-Email:sunrise@sms.lk </P>
+</body>
+</html>
